@@ -44,6 +44,18 @@ class SQLCommands:
       username = %s
       AND password_hash = %s;
     """
+    DESCRIBE_USER = """
+    -- DESCRIBE_USER
+    SELECT
+      id,
+      username,
+      role,
+      disabled
+    FROM
+      users
+    WHERE
+      username = %s;
+    """
 
     #######################
     #   Table Management  #
